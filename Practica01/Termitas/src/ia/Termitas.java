@@ -81,9 +81,9 @@ public class Termitas extends PApplet {
         text("Proporcion de astillas: " + densidad, 128, (alto*celda)+24);
 
         // Actualizar el modelo a la siguiente generacion.
-        //modelo.evolucion1();
+        modelo.evolucion1();
         //modelo.evolucion2();
-        modelo.evolucion3();
+        //modelo.evolucion3();
     }
     
     
