@@ -1,0 +1,61 @@
+\documentclass{article}
+
+\usepackage{amsfonts} 
+\usepackage{amsmath} 
+\usepackage{graphicx} 
+\usepackage{float} 
+\usepackage{natbib} 
+\usepackage{slashbox} 
+\usepackage{graphicx} 
+\usepackage{flushend} 
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsxtra} 
+\usepackage{amstext} 
+\usepackage{amsthm} 
+\usepackage{amsbsy} 
+\usepackage{latexsym} 
+\usepackage{mathrsfs} 
+\usepackage{eucal} 
+\usepackage{synttree} 
+
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\title{Espacio de estados}
+\author{Flores González Luis Brandon}
+\date{17 de Diciembre de 2017}
+
+
+\begin{document}
+
+	\maketitle
+	Problema de los caníbales y los misionarios. Hay tres misionarios y tres caníbales a un lado del río y requieren cruzar al otro lado. Para ello cuentan con una pequeña barca donde sólo caben dos personas, aunque basta una para poder remar y cruzar el río Si en algún momento hay más caníbales que misionarios, los caníbales se comen a esos misionarios.
+	
+	\begin{enumerate}
+		\item Define a las variables de este sistema y sus valores posibles $S$
+		\\$Simbolos = {0, 1, 2, 3, M, C, B}$
+		\\$S = {(M, C, B) | 0 \leq M \leq 3, 0 \leq C \leq 3, 0 \leq B \leq 1}$
+		\\M es la cantidad de misionarios del lado derecho.
+		\\C es la cantidad de canibales del lado derecho.
+		\\B es la dirección de la barca, 0 esta del lado izquierdo y 1 del lado derecho.
+		\item Define las acciones posibles $A$
+		\\$A = mover(M, C, B)$ tal que $0 \leq M \leq 3, 0 \leq C \leq 3, 0 \leq B \leq 1$
+		\item Define la función de transición 
+		\\$\gamma = \gamma(s, mover(M, C, B)) -> s'$
+		\\$s'$ es la suma o resta de los vectores $(1, 0, 1) (2, 0, 1) (0, 1, 1) (0, 2, 1) (1, 1, 1)$ si $ M \geq C$ cuando $M es diferente a 0$ si $M = 0$ entonces $M \leq C$ es valido.
+		\\Además el vector (2, 1, 1) no es valido. 
+		\\Por otra parte cualquier resultado fuera de los limites del problema (3, 3, 1) y (0, 0, 0). Serán inválidos
+		\item ¿Cuántos estados tiene este espacio, de acuerdo a tu definición?
+		\item Dibuja la cerradura transitiva de a partir del estado con los misionarios, los caníbales y la barca en el mismo lado del río.
+		
+		\synttree [(3, 3, 1)[(3, 2, 0) [(3, 3, 1)]]
+		[(3, 1, 0)[(3, 2, 1) [(2, 2, 0)][(3, 1, 0)][(3, 0, 0)][(2, 1, 0)[(3, 1, 1)][(2, 2, 1)[(2, 1, 0)][(2, 0, 0)][(1, 1, 0)]][(3, 2, 1)]]][(3, 3, 1)]]
+		[(2, 2, 0) [(3, 2, 1)][(3, 3, 1)]]] 
+		
+		\item ¿Qué solución encuentras para que todos crucen el río con vida?		
+		\\$(3, 3, 1) (3, 1, 0) (3, 2, 1) (3, 0, 0) (3, 1, 1) (1, 1, 0) (2, 2, 1) (0, 2, 0) (0, 3, 1) (0, 1, 0) (0, 2, 1) (0, 0, 0)$
+		\\También puede haber esta otra solución ligeramente diferente.
+				\\$(3, 3, 1) (3, 1, 0) (3, 2, 1) (3, 0, 0) (3, 1, 1) (1, 1, 0) (2, 2, 1) (0, 2, 0) (0, 3, 1) (0, 1, 0) (1, 1, 1) (0, 0, 0)$
+	\end{enumerate}
+\end{document}

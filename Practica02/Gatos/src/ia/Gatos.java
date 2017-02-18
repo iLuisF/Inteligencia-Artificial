@@ -13,6 +13,7 @@ import java.util.Hashtable;
 /**
  *
  * @author Verónica Arriola
+ * @author Flores González Luis Brandon
  */
 public class Gatos extends PApplet {
 
