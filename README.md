@@ -52,8 +52,7 @@ usuarios y lo que les gusta**. [Leer más](https://github.com/iLuisF/Inteligenci
 sobre los algoritmos empleados y la solución.
 
 ### Proyecto 4: laberinto ###
-Se crea un laberinto plano aleatorio y se encuentra un camino desde la esquina superior izquierda hasta la inferior derecha del 
-laberinto.
+Se crea un **laberinto plano aleatorio** y se **encuentra un camino desde la esquina superior izquierda hasta la inferior derecha** del laberinto.
 
 Para crear el laberinto se necesito de un agente porque este lo construye mientras se
 mueve en lo que inicialmente es un tablero. Al final existe un camino entre
@@ -64,4 +63,19 @@ laberinto hasta encontrar la casilla objetivo. La solución muestra la secuencia
 de casillas que unen a la inicial con la final. 
 
 [Leer más](https://github.com/iLuisF/Inteligencia-Artificial/blob/master/Proyecto04/Reporte.pdf "Leer más") 
+sobre los algoritmos empleados y la solución.
+
+## Prácticas ##
+
+### Práctica 1: modelo de terminas (introducción a Agentes) ###
+Programación de un sistema de simulación biológico que muestra las bases de un autómata celular, programación dirigida a agentes, 
+sistemas complejos y emergenia de propiedadees como la auto-organización.
+
+Se implemento el **Modelo de termitas** donde las terminas mueven las astillas aleatoriamente para construir pequeños grupos o clusters de astillas. [Leer más](https://github.com/iLuisF/Inteligencia-Artificial/blob/master/Practica01/Termitas/docs/Practica1IA.pdf "Leer más") 
+sobre los algoritmos empleados y la solución.
+
+### Práctica 2: espacio de búsqueda (sucesores de gato) ###
+
+Se generan los sucesores de los estados válidos del juego del Gato; se hace uso de un arbol para guardar los estados del gato.
+[Leer más](https://github.com/iLuisF/Inteligencia-Artificial/blob/master/Practica02/Practica2.pdf "Leer más") 
 sobre los algoritmos empleados y la solución.
